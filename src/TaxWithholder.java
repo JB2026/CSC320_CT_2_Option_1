@@ -1,8 +1,12 @@
+// Imports
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
-//A class that gets the user's weekly income and calculates their weekly income tax withholding amount.
+/** 
+* A class that gets the user's weekly income and calculates their weekly income tax withholding amount.
+* 
+* @author  Joshua Borck
+*/
 public class TaxWithholder {
 
 	public static void main(String[] args) {
@@ -33,7 +37,11 @@ public class TaxWithholder {
 		scnr.close();
 	}
 	
-	// A method to calculate a user output for weekly income input.
+	 /** 
+	    * This method calculates a user output for a weekly income input.
+	    * @param weeklyIncome This is a double representing the user's weekly income.
+	    * @return String This returns the output summary string of the user's weekly income tax.
+	    */
 	public static String calculateWeeklyIncomeTaxOutput(double weeklyIncome) {
 		// Initialize properties and set a base output to be used.
 		String mainOutput = "With a weekly income of $%.2f, the tax is %d%%, and $%.2f will be taken out weekly.";
@@ -65,5 +73,4 @@ public class TaxWithholder {
 		// Return the formatted string containing all the correct tax and income values.
 		return String.format(mainOutput, weeklyIncome, taxPercent, taxedIncome);
 	}
-
 }
